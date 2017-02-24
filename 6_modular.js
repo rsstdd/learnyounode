@@ -87,3 +87,14 @@
 
 ─────────────────────────────────────────────────────────────────────────────
 */
+
+const fs = require('fs');
+const path = require('path');
+const filterMod = require('./6_mod-filter');
+
+filterMod(process.argv[2], process.argv[3], (err, data) => {
+    data.map((file) => {
+
+        console.log(file);
+    });
+});
